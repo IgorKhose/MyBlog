@@ -6,25 +6,35 @@ import PostList from '../post-list';
 import PostAddForm from '../post-add-form';
 
 import './app.css';
-import '../app-header/app-header.css';
-import '../post-add-form/post-add-form.css';
-import '../post-list-item/post-list-item.css';
-import '../post-list/post-list.css';
-import '../post-status-filter/post-status-filter.css'
-import '../search-panel/search-panel.css';
+import styled from 'styled-components';
+
+const AppBlock=styled.div`
+margin: 0 auto;
+max-width: 800px;
+`;
+
+const StyledAppBlock= styled(AppBlock)`
+background-color:grey;
+`;
 
 const App=()=>{
+
+    const data=[
+        {label:'Going to Learn React', important:true, id:'three'},
+        {label:'OK!', important:false, id:'two'},
+        {label:'Need a break', important:false, id:'one'}
+        
+    ];
     return(
-    <div className="app">
+    <AppBlock>
         <AppHeader/>
         <div className="search-panel d-flex">
         <SearchPanel/> 
         <PostStatusFilter/>
         </div>
-        <PostList/>
+        <PostList posts={data}/>
         <PostAddForm/>
-        <h1>Just for Test</h1>
-    </div>
+    </AppBlock>
         )
 }
 
