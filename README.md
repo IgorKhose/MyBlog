@@ -1,4 +1,4 @@
-Микроблог с возможностью добавлять и удалять записи, ставить лайк и добавлять в избранное. 
+Микроблог с возможностью добавлять и удалять записи, ставить лайк и добавлять в избранное. Проект создан при помощи React
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
